@@ -20,18 +20,17 @@ public class ExercicioStack01 {
 		System.out.println("*************************************");
 		System.out.print("Entre com a opção desejada: ");
 		numero = sc.nextInt();
-		
 
 		while (numero != 0) {
 			if (numero < 0 || numero > 3) {
 				System.out.println("Opção inválida!");
 			}
-			
+
 			if (numero == 1) {
 				System.out.print("Digite o nome do livro: ");
-				livro = sc.next();
 				sc.skip("\\R?");
-				pilha.add(livro);
+				livro = sc.nextLine();
+				pilha.push(livro);
 				System.out.println("\nPilha: ");
 				Iterator<String> ilivros = pilha.iterator();
 				while (ilivros.hasNext()) {
@@ -62,10 +61,9 @@ public class ExercicioStack01 {
 					while (ilivros.hasNext()) {
 						System.out.println(ilivros.next());
 					}
-					System.out.println("Um Livro foi retirado da pilha!");
+					System.out.println("\nUm Livro foi retirado da pilha!");
 				}
 			}
-			
 			System.out.print("\nEntre com a opção desejada: ");
 			numero = sc.nextInt();
 		}

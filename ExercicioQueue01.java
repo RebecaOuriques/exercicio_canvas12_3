@@ -29,9 +29,9 @@ public class ExercicioQueue01 {
 
 			if (numero == 1) {
 				System.out.print("Digite o nome: ");
+				sc.skip("\\R?");
 				nome = sc.next();
 				fila.add(nome);
-				sc.skip("\\R?");
 				System.out.println("\nFila: ");
 				Iterator<String> inomes = fila.iterator();
 				while (inomes.hasNext()) {
